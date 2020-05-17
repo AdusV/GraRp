@@ -9,6 +9,11 @@ public class PlayerStats : MonoBehaviour
 
     [SerializeField] private int regenerationRate;
 
+    [SerializeField] private int levelXP = 1;
+    [SerializeField] private int points = 0;
+
+    [SerializeField] int[] pointsForXPLevels;
+
     /// ******************************
     public static PlayerStats Instance = null;
     private void Awake()
