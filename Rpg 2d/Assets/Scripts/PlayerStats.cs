@@ -30,4 +30,16 @@ public class PlayerStats : MonoBehaviour
         breathingTime += regenerationRate;
         Debug.Log("Breathing time:" + breathingTime);
     }
+
+    public void AddPoints(int pointsToAdd)
+    {
+        points += pointsToAdd;
+        Debug.Log($"points: {points}");
+
+        if (points > pointsForXPLevels[levelXP] && levelXP < pointsForXPLevels.Length - 1) 
+        {
+            levelXP++;
+            points = 0;
+        }
+    }
 }
