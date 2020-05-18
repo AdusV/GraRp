@@ -1289,6 +1289,7 @@ GameObject:
   - component: {fileID: 354527083}
   - component: {fileID: 354527085}
   - component: {fileID: 354527084}
+  - component: {fileID: 354527086}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1408,6 +1409,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0.01397723, y: 0.013976812}
   m_Size: {x: 0.5108005, y: 0.7623887}
   m_Direction: 0
+--- !u!114 &354527086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354527080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982ebb54b1bcf444b8c3fdc8a0bbb25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breathingPoints: 1
 --- !u!4 &450173001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4813064448540171314, guid: 71ae035b3c8b23443a90aeecf67d2b0a,
@@ -13438,6 +13452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breathingTime: 15
   maxBreathingTime: 15
+  breathingIncreaseByXPLevel: 5
   regenerationRate: 3
   levelXP: 1
   points: 0

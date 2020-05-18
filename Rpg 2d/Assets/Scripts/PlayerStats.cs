@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    [SerializeField] private int breathingTime;
+    [SerializeField] private int breathingTime; 
+    public int BreathingTime
+    {
+        get { return breathingTime; }       
+    }
+
     [SerializeField] private int maxBreathingTime;
+    [SerializeField] private int breathingIncreaseByXPLevel;
 
     [SerializeField] private int regenerationRate;
 
@@ -27,7 +33,7 @@ public class PlayerStats : MonoBehaviour
     /// ******************************
     public void Regeneration()
     {
-        breathingTime += regenerationRate;
+        breathingTime = Mathf.Clamp(breathingTime + regenerationRate,0,maxBreathingTime);
         Debug.Log("Breathing time:" + breathingTime);
     }
 
@@ -40,6 +46,12 @@ public class PlayerStats : MonoBehaviour
         {
             levelXP++;
             points = 0;
+            maxBreathingTime += breathingIncreaseByXPLevel;
         }
+    }
+
+    public void UpdateBreathingTime(int valueToSub)
+    {
+        breathingTime -= valueToSub;
     }
 }
