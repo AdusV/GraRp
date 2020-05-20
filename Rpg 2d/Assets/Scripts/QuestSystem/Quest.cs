@@ -8,6 +8,9 @@ public class Quest : MonoBehaviour
     public string questDescripiton;
     public bool isFinished = false;
     public QuestObjective questObjective;
-    
 
+    public virtual void Finished()
+    {
+        Debug.Log($"Zadanie {questName} zaliczone.");
+    }
 }

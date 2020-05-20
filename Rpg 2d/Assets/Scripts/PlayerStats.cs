@@ -54,4 +54,10 @@ public class PlayerStats : MonoBehaviour
     {
         breathingTime -= valueToSub;
     }
+
+    public void UpdateRegenartionRate(int valueToAdd)
+    {
+        regenerationRate += valueToAdd;
+        Debug.Log($"Nowa wartosc regeneracji to{regenerationRate}.");
+    }
 }

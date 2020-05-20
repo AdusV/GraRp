@@ -8,11 +8,7 @@ public class QuestObjective
     public int amountToFinished;
     public int currentAmount;
     public Quest quest;
-    public QuestObjective(Quest par_quest, int amount)
-    {
-        quest = par_quest;
-        amountToFinished = amount;
-    }
+ 
 
     public void IncreaseAmount(int amount)
     {
