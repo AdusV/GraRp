@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -20,6 +22,10 @@ public class PlayerStats : MonoBehaviour
 
     [SerializeField] int[] pointsForXPLevels;
 
+    [Header("Interface")]
+    [SerializeField] Image breathingBar;
+    [SerializeField] TextMeshProUGUI pointsText;
+
     /// ******************************
     public static PlayerStats Instance = null;
     private void Awake()
@@ -31,10 +37,15 @@ public class PlayerStats : MonoBehaviour
         Instance = this;
     }
     /// ******************************
+
+    private void Start()
+    {
+        InvokeRepeating("UpdateBreathingBarUI", 0, 0.1f);
+    }
     public void Regeneration()
     {
         breathingTime = Mathf.Clamp(breathingTime + regenerationRate,0,maxBreathingTime);
-        Debug.Log("Breathing time:" + breathingTime);
+        //Debug.Log("Breathing time:" + breathingTime);
     }
 
     public void AddPoints(int pointsToAdd)
@@ -48,16 +59,28 @@ public class PlayerStats : MonoBehaviour
             points = 0;
             maxBreathingTime += breathingIncreaseByXPLevel;
         }
+        UpdatePointsTextUI();
     }
 
     public void UpdateBreathingTime(int valueToSub)
     {
         breathingTime -= valueToSub;
+        
     }
 
     public void UpdateRegenartionRate(int valueToAdd)
     {
         regenerationRate += valueToAdd;
         Debug.Log($"Nowa wartosc regeneracji to{regenerationRate}.");
+    }
+
+    void UpdateBreathingBarUI()
+    {
+        breathingBar.fillAmount = breathingTime / (float)maxBreathingTime;
+        Debug.Log($"fillAmount: {breathingTime / (float)maxBreathingTime}");
+    }
+    void UpdatePointsTextUI()
+    {
+        pointsText.text = points.ToString();
     }
 }

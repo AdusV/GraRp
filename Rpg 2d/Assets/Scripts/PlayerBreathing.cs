@@ -13,6 +13,17 @@ public class PlayerBreathing : MonoBehaviour
     void Breathe()
     {
         PlayerStats.Instance.UpdateBreathingTime(breathingPoints);
-        Debug.Log(PlayerStats.Instance.BreathingTime);
+        //Debug.Log(PlayerStats.Instance.BreathingTime);
+    }
+
+    public void StartBreathing()
+    {
+        CancelInvoke("Breathe");
+        InvokeRepeating("Breathe", 0, 1);
+
+    }
+    public void StopBreathing()
+    {
+        CancelInvoke("Breathe");
     }
 }

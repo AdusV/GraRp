@@ -11,6 +11,7 @@ public class Quest : MonoBehaviour
 
     public virtual void Finished()
     {
+        isFinished = true;
         Debug.Log($"Zadanie {questName} zaliczone.");
     }
 }

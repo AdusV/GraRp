@@ -18,6 +18,7 @@ public class CollectionObjective : QuestObjective
     {
         if (pickedUpObjName == itemName)
         {
+            Debug.Log($"Zebrano {pickedUpObjName} .");
             IncreaseAmount(1);
         }
     }
