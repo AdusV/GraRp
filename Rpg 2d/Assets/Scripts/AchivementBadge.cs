@@ -13,4 +13,23 @@ public class AchivementBadge : MonoBehaviour
     [SerializeField] Image badge;
     [SerializeField] bool isCompleted;
 
+    public void ShowInstruction()
+    {
+        if (!isCompleted)
+        {
+        instructionText.text = textOfInstruction;
+        instructionText.transform.parent.gameObject.SetActive(true);
+        }
+
+
+    }
+
+    public void ActivateBadge()
+    {
+        badgeBackground.color = Color.white;
+        badge.color = Color.white;
+        isCompleted = true;
+        Destroy(GetComponent<Button>());
+    }
+
 }

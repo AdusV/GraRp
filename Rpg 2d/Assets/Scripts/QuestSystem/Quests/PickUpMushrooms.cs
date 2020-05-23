@@ -11,5 +11,10 @@ public class PickUpMushrooms : Quest
         questObjective = new CollectionObjective(this, 5, "mushroom");
     }
 
- 
+    public override void Finished()
+    {
+        Achievementes.Instance.ActivateGrzybobranie();
+        base.Finished();
+    }
+
 }
