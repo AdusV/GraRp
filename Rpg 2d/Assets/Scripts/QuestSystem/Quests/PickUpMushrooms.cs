@@ -10,7 +10,10 @@ public class PickUpMushrooms : Quest
         questDescripiton = "Zbierz 5 grzybow";
         questObjective = new CollectionObjective(this, 5, "mushroom");
     }
-
+    private void Start()
+    {
+        NotificationSystem.Instance.AddNotification("Otrzymano nowy Quest: Zbierz grzyby ");
+    }
     public override void Finished()
     {
         Achievementes.Instance.ActivateGrzybobranie();

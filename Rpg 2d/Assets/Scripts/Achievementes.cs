@@ -28,6 +28,7 @@ public class Achievementes : MonoBehaviour
     public void ActivateGrzybobranie()
     {
         grzybobranie.ActivateBadge();
+        NotificationSystem.Instance.AddNotification("Przyznano odznake \"Grzybobranie\". ");
     }
     public void ActivateLodySzpinakowe()
     {
