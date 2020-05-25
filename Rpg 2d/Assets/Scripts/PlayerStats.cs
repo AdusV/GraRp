@@ -18,7 +18,18 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private int regenerationRate;
 
     [SerializeField] private int levelXP = 1;
+    public int LevelXp
+    {
+        get { return levelXP; }
+        set { levelXP = value; }   
+    }
     [SerializeField] private int points = 0;
+
+    public int Points
+    {
+        get { return points; }
+        set { points = value; }
+    }
 
     [SerializeField] int[] pointsForXPLevels;
 

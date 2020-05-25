@@ -6,6 +6,10 @@ public class Achievementes : MonoBehaviour
 {
     [SerializeField] AchivementBadge odkrycieBieguna;
     [SerializeField] AchivementBadge grzybobranie;
+    public AchivementBadge Grzybobranie
+    {
+        get { return grzybobranie; }
+    }
     [SerializeField] AchivementBadge lodySzpiankowe;
     [SerializeField] AchivementBadge rozmowaZPrzybyszem;
 

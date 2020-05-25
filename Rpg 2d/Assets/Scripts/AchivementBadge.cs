@@ -11,7 +11,7 @@ public class AchivementBadge : MonoBehaviour
     [SerializeField] string textOfInstruction;
     [SerializeField] Image badgeBackground;
     [SerializeField] Image badge;
-    [SerializeField] bool isCompleted;
+     public bool isCompleted;
 
     public void ShowInstruction()
     {
