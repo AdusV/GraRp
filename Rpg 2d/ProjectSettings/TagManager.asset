@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -52,4 +52,7 @@ TagManager:
     locked: 0
   - name: Interaction
     uniqueID: 2405224233
+    locked: 0
+  - name: Enemy
+    uniqueID: 3837300891
     locked: 0

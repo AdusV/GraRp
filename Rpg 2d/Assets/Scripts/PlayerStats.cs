@@ -88,7 +88,7 @@ public class PlayerStats : MonoBehaviour
     void UpdateBreathingBarUI()
     {
         breathingBar.fillAmount = breathingTime / (float)maxBreathingTime;
-        Debug.Log($"fillAmount: {breathingTime / (float)maxBreathingTime}");
+       // Debug.Log($"fillAmount: {breathingTime / (float)maxBreathingTime}");
     }
     void UpdatePointsTextUI()
     {
