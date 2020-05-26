@@ -15,7 +15,7 @@ public class Peasant : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Wheat.AddComponent<AddingCactusQuest>();
+        Wheat.AddComponent<AddingAxeQuest>();
         quests.AddComponent<WheatQuest>();
     }
 
