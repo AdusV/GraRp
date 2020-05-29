@@ -18,5 +18,6 @@ public class Tent : MonoBehaviour
 
         pinkDiamond.AddComponent<AddingWheatQuest>();
         quests.AddComponent<PinkDiamondQuest>();
+        
     }
 }

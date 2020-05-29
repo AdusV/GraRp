@@ -6,6 +6,13 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
+    [SerializeField] int addHitPoints;
+    public int AddHitPoints
+    {
+        get { return addHitPoints; }
+    }
+
+
     [SerializeField] private int breathingTime; 
     public int BreathingTime
     {
@@ -93,5 +100,9 @@ public class PlayerStats : MonoBehaviour
     void UpdatePointsTextUI()
     {
         pointsText.text = points.ToString();
+    }
+    public void UpdateHitPoints(int valueToAdd)
+    {
+        addHitPoints += valueToAdd;
     }
 }

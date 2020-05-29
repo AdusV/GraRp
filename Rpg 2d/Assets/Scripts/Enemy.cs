@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public int health;
     public float speed;
+    public int damage;
 
   // private Animator anim;
    // public GameObject bloodEffect;
@@ -29,4 +30,5 @@ public class Enemy : MonoBehaviour
         health -= damage;
         Debug.Log("damage");
     }
+    
 }
