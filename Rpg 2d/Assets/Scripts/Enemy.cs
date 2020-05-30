@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
     public int health;
     public float speed;
-    public int damage;
+   // public int damage;
 
   // private Animator anim;
    // public GameObject bloodEffect;

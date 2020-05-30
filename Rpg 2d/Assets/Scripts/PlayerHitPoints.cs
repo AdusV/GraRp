@@ -29,4 +29,10 @@ public class PlayerHitPoints : MonoBehaviour
     {
         hitPoints -= damage;
     }
+    public void TakeDamagePlayer(int damage)
+    {
+        // Instantiate(bloodEffect, transform.position, Quaternion.identity);
+       hitPoints -= damage;
+        Debug.Log("damage gracza");
+    }
 }
