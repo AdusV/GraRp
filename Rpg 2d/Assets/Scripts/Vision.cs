@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Vision : MonoBehaviour
 {
-    Vector3 destination;
+    //Vector3 destination;
 
-    private void Update()
-    {
-        destination = transform.parent.GetComponent<EnemyStates>().navMeshAgent.destination;
-        transform.LookAt(destination);
-    }
+    //private void Update()
+    //{
+    //    destination = transform.parent.GetComponent<EnemyStates>().navMeshAgent.destination;
+    //    transform.LookAt(destination);
+    //}
 }
