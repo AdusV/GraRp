@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     Animator anim;   
     bool dirToRight = true;
+    public AudioClip clip;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -36,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            AudioSource.PlayClipAtPoint(clip, transform.position);
             anim.SetTrigger("Attack");
         }
     }

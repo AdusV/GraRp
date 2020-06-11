@@ -14,6 +14,8 @@ public class PickUpMushrooms : Quest
     {
         NotificationSystem.Instance.AddNotification("Otrzymano nowy Quest: Zbierz grzyby ");
     }
+    
+   
     public override void Finished()
     {
         Achievementes.Instance.ActivateGrzybobranie();

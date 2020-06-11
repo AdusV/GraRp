@@ -10,7 +10,10 @@ public class DialogWithPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        StartCoroutine(ChangeDialogWords());   
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            StartCoroutine(ChangeDialogWords());
+        }
     }
     IEnumerator ChangeDialogWords()
     {

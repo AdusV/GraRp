@@ -8,14 +8,19 @@ public class Forester : MonoBehaviour
     [SerializeField] GameObject axe;
 
     private void Start()
-    {
-        quests = GameObject.Find("Quests");
+    {                   
+            quests = GameObject.Find("Quests");       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        axe.GetComponent<AddingCactusQuest>();
+        //axe.GetComponent<AddingCactusQuest>();
+        if(axe==true)
+        {
         quests.AddComponent<AxeQuest>();
+           
+
+        }
         
     }
 }

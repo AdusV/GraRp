@@ -110,3 +110,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 2
+  clip: {fileID: 8300000, guid: 5ac6242608b593342802f2c42954d298, type: 3}

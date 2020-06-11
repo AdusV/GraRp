@@ -11,8 +11,6 @@ public class AttackMelle : MonoBehaviour
     public LayerMask whatIsEnemies;
     
     public int damage;
-    //public Animator camAnim;
-    //public Animator playerAnim;
     public float attackRangeX;
     public float attackRangeY;
     private void Update()
@@ -21,8 +19,7 @@ public class AttackMelle : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.Space))
              {
-                //camAnim.SetTrigger("shake");
-                //playerAnim.SetTrigger("attack");
+                
                 Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {

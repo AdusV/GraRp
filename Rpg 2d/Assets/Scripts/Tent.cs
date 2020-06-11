@@ -15,9 +15,10 @@ public class Tent : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        pinkDiamond.AddComponent<AddingWheatQuest>();
-        quests.AddComponent<PinkDiamondQuest>();
-        
+        if (pinkDiamond == true)
+        {
+            // pinkDiamond.AddComponent<AddingWheatQuest>();
+            quests.AddComponent<PinkDiamondQuest>();
+        }
     }
 }
